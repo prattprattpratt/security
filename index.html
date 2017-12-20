@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Security Training</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body onload="loader()">
+    <div id="preload1"></div>
+    <div id="preload2"></div>
+
+    <div id="loader"></div>
+    <div id="half-and-half" class="animate-bottom" style="display: none;">
+      <div class="side-pull left">< Social Engineering</div>
+      <div class="side-pull right">Phishing ></div>
+      <h1 id="big-header">Security</h1>
+      <p style="position: absolute;">A treatise on information security by Chris Pratt and Steven Galorath</p>
+    </div>
+
+  </body>
+</html>
+
+<script>
+function loader() {
+    setTimeout(showPage, 7000);
+}
+
+function showPage() {
+  $("#loader").css('display', 'none');
+  $("#half-and-half").css('display', 'block');
+}
+
+$(".side-pull.right").hover(function() {
+  console.log("hovered pull right");
+  $("#half-and-half::after").css("transform", "rotateY(16deg)");
+  $("#half-and-half::after").css("transform-origin", "left");
+})
+</script>
